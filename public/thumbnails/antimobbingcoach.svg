@@ -1,18 +1,89 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="400" height="240" viewBox="0 0 400 240">
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="480" viewBox="0 0 800 480">
   <defs>
-    <pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse">
-      <circle cx="10" cy="10" r="1.2" fill="white" opacity="0.08"/>
-    </pattern>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0%" stop-color="#0099A8"/>
-      <stop offset="100%" stop-color="#007A87"/>
+      <stop offset="100%" stop-color="#00B4C5"/>
     </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" stroke-width="0.5" opacity="0.06"/>
+    </pattern>
+    <pattern id="dots" width="30" height="30" patternUnits="userSpaceOnUse">
+      <circle cx="15" cy="15" r="1" fill="white" opacity="0.07"/>
+    </pattern>
   </defs>
-  <rect width="400" height="240" rx="12" fill="url(#bg)"/>
-  <rect width="400" height="240" rx="12" fill="url(#dots)"/>
-  <g transform="translate(160,80)" fill="none" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
-    <circle cx="24" cy="24" r="22"/>
-    <polygon points="16,32 24,6 32,32 24,26" fill="white" fill-opacity="0.3" stroke="white"/>
-    <polygon points="16,16 24,42 32,16 24,22" fill="white" fill-opacity="0.15" stroke="white"/>
+  <rect width="800" height="480" rx="16" fill="url(#bg)"/>
+  <rect width="800" height="480" rx="16" fill="url(#grid)"/>
+  <rect width="800" height="480" rx="16" fill="url(#dots)"/>
+  <circle cx="120" cy="100" r="60" fill="none" stroke="white" stroke-width="1" opacity="0.04"/>
+  <circle cx="120" cy="100" r="40" fill="none" stroke="white" stroke-width="0.5" opacity="0.03"/>
+  <circle cx="680" cy="380" r="80" fill="none" stroke="white" stroke-width="1" opacity="0.04"/>
+  <circle cx="680" cy="380" r="50" fill="none" stroke="white" stroke-width="0.5" opacity="0.03"/>
+  <polygon points="700,60 730,80 730,120 700,140 670,120 670,80" fill="none" stroke="white" stroke-width="0.8" opacity="0.05"/>
+  <polygon points="100,350 125,367 125,400 100,417 75,400 75,367" fill="none" stroke="white" stroke-width="0.8" opacity="0.04"/>
+  <rect x="60" y="50" width="30" height="30" rx="4" fill="none" stroke="white" stroke-width="0.6" opacity="0.03" transform="rotate(15 75 65)"/>
+  <rect x="710" y="200" width="25" height="25" rx="3" fill="none" stroke="white" stroke-width="0.6" opacity="0.03" transform="rotate(-20 722 212)"/>
+  <g transform="translate(400,240)" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Outer ring -->
+    <circle cx="0" cy="0" r="80" stroke-width="3"/>
+    <circle cx="0" cy="0" r="75" stroke-width="1" opacity="0.4"/>
+    <!-- Tick marks -->
+    <line x1="0" y1="-80" x2="0" y2="-68" stroke-width="3"/>
+    <line x1="80" y1="0" x2="68" y2="0" stroke-width="3"/>
+    <line x1="0" y1="80" x2="0" y2="68" stroke-width="3"/>
+    <line x1="-80" y1="0" x2="-68" y2="0" stroke-width="3"/>
+    <!-- Minor ticks -->
+    <line x1="56" y1="-56" x2="50" y2="-50" stroke-width="1.5" opacity="0.5"/>
+    <line x1="56" y1="56" x2="50" y2="50" stroke-width="1.5" opacity="0.5"/>
+    <line x1="-56" y1="56" x2="-50" y2="50" stroke-width="1.5" opacity="0.5"/>
+    <line x1="-56" y1="-56" x2="-50" y2="-50" stroke-width="1.5" opacity="0.5"/>
+    <!-- Cardinal letters -->
+    <text x="0" y="-52" text-anchor="middle" fill="white" font-size="16" font-family="sans-serif" font-weight="bold" opacity="0.8">N</text>
+    <text x="54" y="5" text-anchor="middle" fill="white" font-size="12" font-family="sans-serif" opacity="0.5">E</text>
+    <text x="0" y="60" text-anchor="middle" fill="white" font-size="12" font-family="sans-serif" opacity="0.5">S</text>
+    <text x="-54" y="5" text-anchor="middle" fill="white" font-size="12" font-family="sans-serif" opacity="0.5">W</text>
+    <!-- Inner circle -->
+    <circle cx="0" cy="0" r="10" fill="white" fill-opacity="0.15" stroke-width="2"/>
+    <circle cx="0" cy="0" r="4" fill="white" opacity="0.6"/>
+    <!-- Needle north (red-ish via opacity) -->
+    <polygon points="0,-65 -8,0 0,-10 8,0" fill="white" fill-opacity="0.5" stroke="white" stroke-width="1.5"/>
+    <!-- Needle south -->
+    <polygon points="0,65 -8,0 0,10 8,0" fill="white" fill-opacity="0.15" stroke="white" stroke-width="1.5"/>
+    <!-- Degree ring marks (subtle) -->
+    <line x1="0" y1="-80" x2="0" y2="-77" stroke-width="0.8" opacity="0.3"/>
+    <line x1="13.891854213354426" y1="-78.78462024097664" x2="13.370909680353636" y2="-75.83019698194002" stroke-width="0.8" opacity="0.3"/>
+    <line x1="27.361611466053496" y1="-75.17540966287268" x2="26.33555103607649" y2="-72.35633180051495" stroke-width="0.8" opacity="0.3"/>
+    <line x1="39.99999999999999" y1="-69.2820323027551" x2="38.49999999999999" y2="-66.68395609140178" stroke-width="0.8" opacity="0.3"/>
+    <line x1="51.42300877492314" y1="-61.28355544951824" x2="49.494645945863525" y2="-58.98542212016131" stroke-width="0.8" opacity="0.3"/>
+    <line x1="61.28355544951824" y1="-51.42300877492315" x2="58.98542212016131" y2="-49.49464594586353" stroke-width="0.8" opacity="0.3"/>
+    <line x1="69.28203230275508" y1="-40.00000000000001" x2="66.68395609140177" y2="-38.50000000000001" stroke-width="0.8" opacity="0.3"/>
+    <line x1="75.17540966287267" y1="-27.361611466053507" x2="72.35633180051494" y2="-26.3355510360765" stroke-width="0.8" opacity="0.3"/>
+    <line x1="78.78462024097664" y1="-13.891854213354433" x2="75.83019698194002" y2="-13.370909680353641" stroke-width="0.8" opacity="0.3"/>
+    <line x1="80" y1="-4.898587196589413e-15" x2="77" y2="-4.7148901767173095e-15" stroke-width="0.8" opacity="0.3"/>
+    <line x1="78.78462024097664" y1="13.891854213354424" x2="75.83019698194002" y2="13.370909680353634" stroke-width="0.8" opacity="0.3"/>
+    <line x1="75.17540966287268" y1="27.361611466053496" x2="72.35633180051495" y2="26.33555103607649" stroke-width="0.8" opacity="0.3"/>
+    <line x1="69.2820323027551" y1="39.999999999999986" x2="66.68395609140178" y2="38.499999999999986" stroke-width="0.8" opacity="0.3"/>
+    <line x1="61.28355544951824" y1="51.42300877492315" x2="58.98542212016131" y2="49.49464594586353" stroke-width="0.8" opacity="0.3"/>
+    <line x1="51.42300877492316" y1="61.28355544951823" x2="49.49464594586354" y2="58.985422120161296" stroke-width="0.8" opacity="0.3"/>
+    <line x1="39.99999999999999" y1="69.2820323027551" x2="38.49999999999999" y2="66.68395609140178" stroke-width="0.8" opacity="0.3"/>
+    <line x1="27.36161146605351" y1="75.17540966287267" x2="26.335551036076502" y2="72.35633180051494" stroke-width="0.8" opacity="0.3"/>
+    <line x1="13.891854213354422" y1="78.78462024097664" x2="13.37090968035363" y2="75.83019698194002" stroke-width="0.8" opacity="0.3"/>
+    <line x1="9.797174393178826e-15" y1="80" x2="9.429780353434619e-15" y2="77" stroke-width="0.8" opacity="0.3"/>
+    <line x1="-13.891854213354438" y1="78.78462024097664" x2="-13.370909680353646" y2="75.83019698194002" stroke-width="0.8" opacity="0.3"/>
+    <line x1="-27.361611466053493" y1="75.17540966287268" x2="-26.335551036076488" y2="72.35633180051495" stroke-width="0.8" opacity="0.3"/>
+    <line x1="-40.00000000000001" y1="69.28203230275508" x2="-38.50000000000001" y2="66.68395609140177" stroke-width="0.8" opacity="0.3"/>
+    <line x1="-51.42300877492314" y1="61.283555449518246" x2="-49.494645945863525" y2="58.98542212016132" stroke-width="0.8" opacity="0.3"/>
+    <line x1="-61.28355544951823" y1="51.42300877492316" x2="-58.985422120161296" y2="49.49464594586354" stroke-width="0.8" opacity="0.3"/>
+    <line x1="-69.28203230275508" y1="40.000000000000036" x2="-66.68395609140177" y2="38.500000000000036" stroke-width="0.8" opacity="0.3"/>
+    <line x1="-75.17540966287265" y1="27.36161146605355" x2="-72.35633180051494" y2="26.33555103607654" stroke-width="0.8" opacity="0.3"/>
+    <line x1="-78.78462024097664" y1="13.891854213354426" x2="-75.83019698194002" y2="13.370909680353636" stroke-width="0.8" opacity="0.3"/>
+    <line x1="-80" y1="1.4695761589768237e-14" x2="-77" y2="1.4144670530151929e-14" stroke-width="0.8" opacity="0.3"/>
+    <line x1="-78.78462024097665" y1="-13.891854213354398" x2="-75.83019698194002" y2="-13.370909680353607" stroke-width="0.8" opacity="0.3"/>
+    <line x1="-75.17540966287268" y1="-27.361611466053454" x2="-72.35633180051495" y2="-26.33555103607645" stroke-width="0.8" opacity="0.3"/>
+    <line x1="-69.28203230275508" y1="-40.00000000000001" x2="-66.68395609140177" y2="-38.50000000000001" stroke-width="0.8" opacity="0.3"/>
+    <line x1="-61.283555449518246" y1="-51.42300877492314" x2="-58.98542212016132" y2="-49.494645945863525" stroke-width="0.8" opacity="0.3"/>
+    <line x1="-51.42300877492317" y1="-61.283555449518225" x2="-49.494645945863546" y2="-58.98542212016129" stroke-width="0.8" opacity="0.3"/>
+    <line x1="-40.000000000000036" y1="-69.28203230275507" x2="-38.500000000000036" y2="-66.68395609140175" stroke-width="0.8" opacity="0.3"/>
+    <line x1="-27.36161146605349" y1="-75.17540966287268" x2="-26.33555103607648" y2="-72.35633180051495" stroke-width="0.8" opacity="0.3"/>
+    <line x1="-13.891854213354502" y1="-78.78462024097664" x2="-13.370909680353709" y2="-75.83019698194" stroke-width="0.8" opacity="0.3"/>
   </g>
 </svg>

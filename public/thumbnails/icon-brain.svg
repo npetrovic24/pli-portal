@@ -1,27 +1,63 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="400" height="240" viewBox="0 0 400 240">
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="480" viewBox="0 0 800 480">
   <defs>
-    <pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse">
-      <circle cx="10" cy="10" r="1.2" fill="white" opacity="0.08"/>
-    </pattern>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0%" stop-color="#0099A8"/>
-      <stop offset="100%" stop-color="#007A87"/>
+      <stop offset="100%" stop-color="#00B4C5"/>
     </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" stroke-width="0.5" opacity="0.06"/>
+    </pattern>
+    <pattern id="dots" width="30" height="30" patternUnits="userSpaceOnUse">
+      <circle cx="15" cy="15" r="1" fill="white" opacity="0.07"/>
+    </pattern>
   </defs>
-  <rect width="400" height="240" rx="12" fill="url(#bg)"/>
-  <rect width="400" height="240" rx="12" fill="url(#dots)"/>
-  <g transform="translate(160,80)" fill="none" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M12 4a8 8 0 0 0-7.7 10.1"/>
-    <path d="M12 4a8 8 0 0 1 7.7 10.1"/>
-    <path d="M20.7 14.1A8 8 0 0 1 12 44"/>
-    <path d="M3.3 14.1A8 8 0 0 0 12 44"/>
-    <path d="M12 4v40"/>
-    <path d="M4.3 14.1C6.5 17 9 19 12 20"/>
-    <path d="M19.7 14.1C17.5 17 15 19 12 20"/>
-    <path d="M4.3 14.1C6.5 11 9 9 12 8"/>
-    <path d="M19.7 14.1C17.5 11 15 9 12 8"/>
-    <circle cx="12" cy="24" r="3" fill="white" stroke="none" opacity="0.4"/>
-    <path d="M3.3 28c3 2 6 3 8.7 3"/>
-    <path d="M20.7 28c-3 2-6 3-8.7 3"/>
+  <rect width="800" height="480" rx="16" fill="url(#bg)"/>
+  <rect width="800" height="480" rx="16" fill="url(#grid)"/>
+  <rect width="800" height="480" rx="16" fill="url(#dots)"/>
+  <circle cx="120" cy="100" r="60" fill="none" stroke="white" stroke-width="1" opacity="0.04"/>
+  <circle cx="120" cy="100" r="40" fill="none" stroke="white" stroke-width="0.5" opacity="0.03"/>
+  <circle cx="680" cy="380" r="80" fill="none" stroke="white" stroke-width="1" opacity="0.04"/>
+  <circle cx="680" cy="380" r="50" fill="none" stroke="white" stroke-width="0.5" opacity="0.03"/>
+  <polygon points="700,60 730,80 730,120 700,140 670,120 670,80" fill="none" stroke="white" stroke-width="0.8" opacity="0.05"/>
+  <polygon points="100,350 125,367 125,400 100,417 75,400 75,367" fill="none" stroke="white" stroke-width="0.8" opacity="0.04"/>
+  <rect x="60" y="50" width="30" height="30" rx="4" fill="none" stroke="white" stroke-width="0.6" opacity="0.03" transform="rotate(15 75 65)"/>
+  <rect x="710" y="200" width="25" height="25" rx="3" fill="none" stroke="white" stroke-width="0.6" opacity="0.03" transform="rotate(-20 722 212)"/>
+  <g transform="translate(400,240)" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Left hemisphere -->
+    <path d="M-8,-70 C-45,-68 -75,-42 -78,-5" opacity="0.9"/>
+    <path d="M-78,-5 C-82,30 -60,58 -35,68" opacity="0.9"/>
+    <path d="M-35,68 C-18,75 -8,72 -4,65" opacity="0.9"/>
+    <path d="M-4,65 L-4,-70" opacity="0.5"/>
+    <!-- Right hemisphere -->
+    <path d="M4,-70 C41,-68 71,-42 74,-5" opacity="0.9"/>
+    <path d="M74,-5 C78,30 56,58 31,68" opacity="0.9"/>
+    <path d="M31,68 C14,75 4,72 0,65" opacity="0.9"/>
+    <!-- Left gyri -->
+    <path d="M-8,-70 C-8,-55 -35,-50 -55,-35" stroke-width="2.5"/>
+    <path d="M-70,-15 C-50,-20 -30,-10 -4,0" stroke-width="2.5"/>
+    <path d="M-75,15 C-55,10 -30,25 -4,30" stroke-width="2.5"/>
+    <path d="M-65,42 C-45,35 -25,50 -4,50" stroke-width="2.5"/>
+    <!-- Right gyri -->
+    <path d="M4,-70 C4,-55 31,-50 51,-35" stroke-width="2.5"/>
+    <path d="M66,-15 C46,-20 26,-10 0,0" stroke-width="2.5"/>
+    <path d="M71,15 C51,10 26,25 0,30" stroke-width="2.5"/>
+    <path d="M61,42 C41,35 21,50 0,50" stroke-width="2.5"/>
+    <!-- Stem -->
+    <path d="M-4,65 C-4,78 -2,85 0,88" stroke-width="3"/>
+    <path d="M0,65 C0,78 -2,85 0,88" stroke-width="3"/>
+    <!-- Synapse dots -->
+    <circle cx="-95" cy="-20" r="3" fill="white" opacity="0.5"/>
+    <circle cx="-90" cy="-35" r="2" fill="white" opacity="0.35"/>
+    <circle cx="-100" cy="5" r="2.5" fill="white" opacity="0.4"/>
+    <circle cx="91" cy="-25" r="3" fill="white" opacity="0.5"/>
+    <circle cx="88" cy="10" r="2" fill="white" opacity="0.35"/>
+    <circle cx="95" cy="-5" r="2.5" fill="white" opacity="0.4"/>
+    <circle cx="-85" cy="30" r="2" fill="white" opacity="0.3"/>
+    <circle cx="85" cy="35" r="2" fill="white" opacity="0.3"/>
+    <!-- Synapse lines -->
+    <line x1="-78" y1="-5" x2="-95" y2="-20" stroke-width="1" opacity="0.25"/>
+    <line x1="-78" y1="-5" x2="-90" y2="-35" stroke-width="1" opacity="0.2"/>
+    <line x1="74" y1="-5" x2="91" y2="-25" stroke-width="1" opacity="0.25"/>
+    <line x1="74" y1="-5" x2="95" y2="-5" stroke-width="1" opacity="0.2"/>
   </g>
 </svg>

@@ -11,6 +11,11 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "PLI Lernportal – Praxis für Lösungs-Impulse",
   description: "Lernportal für Praxis für Lösungs-Impulse AG",
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
+  manifest: "/manifest.webmanifest",
 };
 
 export default function RootLayout({

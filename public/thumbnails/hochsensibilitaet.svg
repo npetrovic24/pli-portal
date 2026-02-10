@@ -1,24 +1,53 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="400" height="240" viewBox="0 0 400 240">
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="480" viewBox="0 0 800 480">
   <defs>
-    <pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse">
-      <circle cx="10" cy="10" r="1.2" fill="white" opacity="0.08"/>
-    </pattern>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0%" stop-color="#0099A8"/>
-      <stop offset="100%" stop-color="#007A87"/>
+      <stop offset="100%" stop-color="#00B4C5"/>
     </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" stroke-width="0.5" opacity="0.06"/>
+    </pattern>
+    <pattern id="dots" width="30" height="30" patternUnits="userSpaceOnUse">
+      <circle cx="15" cy="15" r="1" fill="white" opacity="0.07"/>
+    </pattern>
   </defs>
-  <rect width="400" height="240" rx="12" fill="url(#bg)"/>
-  <rect width="400" height="240" rx="12" fill="url(#dots)"/>
-  <g transform="translate(160,80)" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-    <circle cx="24" cy="24" r="6" fill="white" fill-opacity="0.3"/>
-    <circle cx="24" cy="12" r="6" fill="white" fill-opacity="0.15"/>
-    <circle cx="34" cy="17" r="6" fill="white" fill-opacity="0.15"/>
-    <circle cx="34" cy="31" r="6" fill="white" fill-opacity="0.15"/>
-    <circle cx="24" cy="36" r="6" fill="white" fill-opacity="0.15"/>
-    <circle cx="14" cy="31" r="6" fill="white" fill-opacity="0.15"/>
-    <circle cx="14" cy="17" r="6" fill="white" fill-opacity="0.15"/>
-    <path d="M24 36v10"/>
-    <path d="M20 42c4 4 8 4 8 0"/>
+  <rect width="800" height="480" rx="16" fill="url(#bg)"/>
+  <rect width="800" height="480" rx="16" fill="url(#grid)"/>
+  <rect width="800" height="480" rx="16" fill="url(#dots)"/>
+  <circle cx="120" cy="100" r="60" fill="none" stroke="white" stroke-width="1" opacity="0.04"/>
+  <circle cx="120" cy="100" r="40" fill="none" stroke="white" stroke-width="0.5" opacity="0.03"/>
+  <circle cx="680" cy="380" r="80" fill="none" stroke="white" stroke-width="1" opacity="0.04"/>
+  <circle cx="680" cy="380" r="50" fill="none" stroke="white" stroke-width="0.5" opacity="0.03"/>
+  <polygon points="700,60 730,80 730,120 700,140 670,120 670,80" fill="none" stroke="white" stroke-width="0.8" opacity="0.05"/>
+  <polygon points="100,350 125,367 125,400 100,417 75,400 75,367" fill="none" stroke="white" stroke-width="0.8" opacity="0.04"/>
+  <rect x="60" y="50" width="30" height="30" rx="4" fill="none" stroke="white" stroke-width="0.6" opacity="0.03" transform="rotate(15 75 65)"/>
+  <rect x="710" y="200" width="25" height="25" rx="3" fill="none" stroke="white" stroke-width="0.6" opacity="0.03" transform="rotate(-20 722 212)"/>
+  <g transform="translate(400,240)" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Petals (8 petals around center) -->
+    <ellipse cx="0" cy="-38" rx="22" ry="32" fill="white" fill-opacity="0.06" stroke-width="2" transform="rotate(0 0 -38)"/>
+    <ellipse cx="26.870057685088803" cy="-26.870057685088806" rx="22" ry="32" fill="white" fill-opacity="0.08" stroke-width="2" transform="rotate(45 26.870057685088803 -26.870057685088806)"/>
+    <ellipse cx="38" cy="-2.326828918379971e-15" rx="22" ry="32" fill="white" fill-opacity="0.1" stroke-width="2" transform="rotate(90 38 -2.326828918379971e-15)"/>
+    <ellipse cx="26.870057685088806" cy="26.870057685088803" rx="22" ry="32" fill="white" fill-opacity="0.06" stroke-width="2" transform="rotate(135 26.870057685088806 26.870057685088803)"/>
+    <ellipse cx="4.653657836759942e-15" cy="38" rx="22" ry="32" fill="white" fill-opacity="0.08" stroke-width="2" transform="rotate(180 4.653657836759942e-15 38)"/>
+    <ellipse cx="-26.870057685088803" cy="26.870057685088813" rx="22" ry="32" fill="white" fill-opacity="0.1" stroke-width="2" transform="rotate(225 -26.870057685088803 26.870057685088813)"/>
+    <ellipse cx="-38" cy="6.980486755139913e-15" rx="22" ry="32" fill="white" fill-opacity="0.06" stroke-width="2" transform="rotate(270 -38 6.980486755139913e-15)"/>
+    <ellipse cx="-26.870057685088813" cy="-26.8700576850888" rx="22" ry="32" fill="white" fill-opacity="0.08" stroke-width="2" transform="rotate(315 -26.870057685088813 -26.8700576850888)"/>
+    <!-- Center -->
+    <circle cx="0" cy="0" r="18" fill="white" fill-opacity="0.15" stroke-width="2.5"/>
+    <circle cx="0" cy="0" r="10" fill="white" fill-opacity="0.1" stroke-width="1.5"/>
+    <!-- Center details -->
+    <circle cx="0" cy="0" r="4" fill="white" opacity="0.3"/>
+    <!-- Stamen dots -->
+    <circle cx="0" cy="-13" r="2" fill="white" opacity="0.25"/>
+    <circle cx="11.258330249197702" cy="-6.500000000000002" r="2" fill="white" opacity="0.25"/>
+    <circle cx="11.258330249197703" cy="6.499999999999997" r="2" fill="white" opacity="0.25"/>
+    <circle cx="1.592040838891559e-15" cy="13" r="2" fill="white" opacity="0.25"/>
+    <circle cx="-11.2583302491977" cy="6.500000000000005" r="2" fill="white" opacity="0.25"/>
+    <circle cx="-11.258330249197702" cy="-6.500000000000002" r="2" fill="white" opacity="0.25"/>
+    <!-- Stem -->
+    <path d="M0,55 C0,65 -3,75 -5,85" stroke-width="2.5" opacity="0.5"/>
+    <!-- Small leaves on stem -->
+    <path d="M-2,65 C-12,60 -18,65 -15,72 C-12,68 -5,67 -2,65z" fill="white" fill-opacity="0.1" stroke-width="1.5"/>
+    <path d="M0,75 C8,70 14,73 12,80 C9,76 3,75 0,75z" fill="white" fill-opacity="0.08" stroke-width="1.5"/>
   </g>
 </svg>

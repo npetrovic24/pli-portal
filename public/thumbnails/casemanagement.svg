@@ -1,18 +1,63 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="400" height="240" viewBox="0 0 400 240">
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="480" viewBox="0 0 800 480">
   <defs>
-    <pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse">
-      <circle cx="10" cy="10" r="1.2" fill="white" opacity="0.08"/>
-    </pattern>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0%" stop-color="#0099A8"/>
-      <stop offset="100%" stop-color="#007A87"/>
+      <stop offset="100%" stop-color="#00B4C5"/>
     </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" stroke-width="0.5" opacity="0.06"/>
+    </pattern>
+    <pattern id="dots" width="30" height="30" patternUnits="userSpaceOnUse">
+      <circle cx="15" cy="15" r="1" fill="white" opacity="0.07"/>
+    </pattern>
   </defs>
-  <rect width="400" height="240" rx="12" fill="url(#bg)"/>
-  <rect width="400" height="240" rx="12" fill="url(#dots)"/>
-  <g transform="translate(160,80)" fill="none" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
-    <circle cx="24" cy="18" r="14" fill="white" fill-opacity="0.15"/>
-    <path d="M14 30l-4 16 14-6 14 6-4-16"/>
-    <polygon points="24,8 27,14 33,15 28,20 30,26 24,22 18,26 20,20 15,15 21,14" fill="white" fill-opacity="0.3"/>
+  <rect width="800" height="480" rx="16" fill="url(#bg)"/>
+  <rect width="800" height="480" rx="16" fill="url(#grid)"/>
+  <rect width="800" height="480" rx="16" fill="url(#dots)"/>
+  <circle cx="120" cy="100" r="60" fill="none" stroke="white" stroke-width="1" opacity="0.04"/>
+  <circle cx="120" cy="100" r="40" fill="none" stroke="white" stroke-width="0.5" opacity="0.03"/>
+  <circle cx="680" cy="380" r="80" fill="none" stroke="white" stroke-width="1" opacity="0.04"/>
+  <circle cx="680" cy="380" r="50" fill="none" stroke="white" stroke-width="0.5" opacity="0.03"/>
+  <polygon points="700,60 730,80 730,120 700,140 670,120 670,80" fill="none" stroke="white" stroke-width="0.8" opacity="0.05"/>
+  <polygon points="100,350 125,367 125,400 100,417 75,400 75,367" fill="none" stroke="white" stroke-width="0.8" opacity="0.04"/>
+  <rect x="60" y="50" width="30" height="30" rx="4" fill="none" stroke="white" stroke-width="0.6" opacity="0.03" transform="rotate(15 75 65)"/>
+  <rect x="710" y="200" width="25" height="25" rx="3" fill="none" stroke="white" stroke-width="0.6" opacity="0.03" transform="rotate(-20 722 212)"/>
+  <g transform="translate(400,240)" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Ribbons -->
+    <path d="M-22,25 L-45,85 L-25,70 L-10,85 L-10,30" fill="white" fill-opacity="0.08" stroke-width="2"/>
+    <path d="M22,25 L45,85 L25,70 L10,85 L10,30" fill="white" fill-opacity="0.08" stroke-width="2"/>
+    <!-- Outer medal ring -->
+    <circle cx="0" cy="-5" r="55" fill="white" fill-opacity="0.08" stroke-width="3"/>
+    <!-- Inner medal ring -->
+    <circle cx="0" cy="-5" r="45" fill="white" fill-opacity="0.05" stroke-width="1.5" opacity="0.5"/>
+    <!-- Notched edge (subtle) -->
+    <line x1="0" y1="-60" x2="0" y2="-57" stroke-width="1.5" opacity="0.2"/>
+    <line x1="14.235047480638642" y1="-58.12592044589876" x2="13.458590345331078" y2="-55.22814296703155" stroke-width="1.5" opacity="0.2"/>
+    <line x1="27.499999999999996" y1="-52.63139720814413" x2="25.999999999999996" y2="-50.03332099679081" stroke-width="1.5" opacity="0.2"/>
+    <line x1="38.89087296526011" y1="-43.890872965260115" x2="36.76955262170047" y2="-41.76955262170048" stroke-width="1.5" opacity="0.2"/>
+    <line x1="47.63139720814412" y1="-32.50000000000001" x2="45.033320996790806" y2="-31.000000000000007" stroke-width="1.5" opacity="0.2"/>
+    <line x1="53.12592044589876" y1="-19.23504748063864" x2="50.22814296703155" y2="-18.45859034533108" stroke-width="1.5" opacity="0.2"/>
+    <line x1="55" y1="-5.0000000000000036" x2="52" y2="-5.0000000000000036" stroke-width="1.5" opacity="0.2"/>
+    <line x1="53.12592044589876" y1="9.235047480638647" x2="50.22814296703155" y2="8.458590345331084" stroke-width="1.5" opacity="0.2"/>
+    <line x1="47.63139720814413" y1="22.49999999999999" x2="45.03332099679081" y2="20.99999999999999" stroke-width="1.5" opacity="0.2"/>
+    <line x1="38.890872965260115" y1="33.89087296526011" x2="36.76955262170048" y2="31.76955262170047" stroke-width="1.5" opacity="0.2"/>
+    <line x1="27.499999999999996" y1="42.63139720814413" x2="25.999999999999996" y2="40.03332099679081" stroke-width="1.5" opacity="0.2"/>
+    <line x1="14.235047480638656" y1="48.12592044589875" x2="13.458590345331093" y2="45.228142967031545" stroke-width="1.5" opacity="0.2"/>
+    <line x1="6.735557395310443e-15" y1="50" x2="6.368163355566236e-15" y2="47" stroke-width="1.5" opacity="0.2"/>
+    <line x1="-14.235047480638618" y1="48.125920445898764" x2="-13.458590345331059" y2="45.22814296703156" stroke-width="1.5" opacity="0.2"/>
+    <line x1="-27.500000000000007" y1="42.63139720814412" x2="-26.000000000000007" y2="40.033320996790806" stroke-width="1.5" opacity="0.2"/>
+    <line x1="-38.89087296526011" y1="33.89087296526012" x2="-36.76955262170047" y2="31.769552621700477" stroke-width="1.5" opacity="0.2"/>
+    <line x1="-47.631397208144115" y1="22.500000000000025" x2="-45.0333209967908" y2="21.00000000000002" stroke-width="1.5" opacity="0.2"/>
+    <line x1="-53.12592044589876" y1="9.235047480638634" x2="-50.22814296703155" y2="8.458590345331073" stroke-width="1.5" opacity="0.2"/>
+    <line x1="-55" y1="-4.99999999999999" x2="-52" y2="-4.99999999999999" stroke-width="1.5" opacity="0.2"/>
+    <line x1="-53.12592044589875" y1="-19.235047480638663" x2="-50.228142967031545" y2="-18.458590345331096" stroke-width="1.5" opacity="0.2"/>
+    <line x1="-47.63139720814412" y1="-32.50000000000001" x2="-45.033320996790806" y2="-31.000000000000007" stroke-width="1.5" opacity="0.2"/>
+    <line x1="-38.89087296526012" y1="-43.8908729652601" x2="-36.76955262170048" y2="-41.76955262170046" stroke-width="1.5" opacity="0.2"/>
+    <line x1="-27.500000000000025" y1="-52.63139720814411" x2="-26.00000000000002" y2="-50.03332099679079" stroke-width="1.5" opacity="0.2"/>
+    <line x1="-14.235047480638638" y1="-58.12592044589876" x2="-13.458590345331075" y2="-55.22814296703155" stroke-width="1.5" opacity="0.2"/>
+    <!-- Star -->
+    <polygon points="0,-35 8,-15 30,-15 13,-1 20,20 0,9 -20,20 -13,-1 -30,-15 -8,-15" fill="white" fill-opacity="0.2" stroke-width="2"/>
+    <!-- Inner star highlight -->
+    <polygon points="0,-25 5,-12 18,-12 8,-3 12,12 0,5 -12,12 -8,-3 -18,-12 -5,-12" fill="white" fill-opacity="0.1" stroke-width="0" opacity="0.5"/>
   </g>
 </svg>

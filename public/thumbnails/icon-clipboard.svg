@@ -1,20 +1,47 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="400" height="240" viewBox="0 0 400 240">
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="480" viewBox="0 0 800 480">
   <defs>
-    <pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse">
-      <circle cx="10" cy="10" r="1.2" fill="white" opacity="0.08"/>
-    </pattern>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0%" stop-color="#0099A8"/>
-      <stop offset="100%" stop-color="#007A87"/>
+      <stop offset="100%" stop-color="#00B4C5"/>
     </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" stroke-width="0.5" opacity="0.06"/>
+    </pattern>
+    <pattern id="dots" width="30" height="30" patternUnits="userSpaceOnUse">
+      <circle cx="15" cy="15" r="1" fill="white" opacity="0.07"/>
+    </pattern>
   </defs>
-  <rect width="400" height="240" rx="12" fill="url(#bg)"/>
-  <rect width="400" height="240" rx="12" fill="url(#dots)"/>
-  <g transform="translate(160,80)" fill="none" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
-    <rect x="6" y="8" width="36" height="38" rx="4" fill="white" fill-opacity="0.15"/>
-    <rect x="14" y="2" width="20" height="10" rx="3" fill="white" fill-opacity="0.2"/>
-    <line x1="14" y1="22" x2="34" y2="22" stroke-width="3"/>
-    <line x1="14" y1="30" x2="30" y2="30" stroke-width="3"/>
-    <line x1="14" y1="38" x2="26" y2="38" stroke-width="3"/>
+  <rect width="800" height="480" rx="16" fill="url(#bg)"/>
+  <rect width="800" height="480" rx="16" fill="url(#grid)"/>
+  <rect width="800" height="480" rx="16" fill="url(#dots)"/>
+  <circle cx="120" cy="100" r="60" fill="none" stroke="white" stroke-width="1" opacity="0.04"/>
+  <circle cx="120" cy="100" r="40" fill="none" stroke="white" stroke-width="0.5" opacity="0.03"/>
+  <circle cx="680" cy="380" r="80" fill="none" stroke="white" stroke-width="1" opacity="0.04"/>
+  <circle cx="680" cy="380" r="50" fill="none" stroke="white" stroke-width="0.5" opacity="0.03"/>
+  <polygon points="700,60 730,80 730,120 700,140 670,120 670,80" fill="none" stroke="white" stroke-width="0.8" opacity="0.05"/>
+  <polygon points="100,350 125,367 125,400 100,417 75,400 75,367" fill="none" stroke="white" stroke-width="0.8" opacity="0.04"/>
+  <rect x="60" y="50" width="30" height="30" rx="4" fill="none" stroke="white" stroke-width="0.6" opacity="0.03" transform="rotate(15 75 65)"/>
+  <rect x="710" y="200" width="25" height="25" rx="3" fill="none" stroke="white" stroke-width="0.6" opacity="0.03" transform="rotate(-20 722 212)"/>
+  <g transform="translate(400,240)" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Board -->
+    <rect x="-55" y="-55" width="110" height="140" rx="8" fill="white" fill-opacity="0.08" stroke-width="2.5"/>
+    <!-- Clip at top -->
+    <rect x="-20" y="-72" width="40" height="25" rx="5" fill="white" fill-opacity="0.12" stroke-width="2.5"/>
+    <line x1="-15" y1="-60" x2="15" y2="-60" stroke-width="2" opacity="0.3"/>
+    <!-- Clip ring -->
+    <circle cx="0" cy="-72" r="6" fill="white" fill-opacity="0.1" stroke-width="2"/>
+    <!-- Checklist items -->
+    <rect x="-38" y="-30" width="12" height="12" rx="2" stroke-width="2" opacity="0.5"/>
+    <path d="M-35,-26 L-31,-22 L-24,-30" stroke-width="2" opacity="0.6"/>
+    <line x1="-18" y1="-24" x2="38" y2="-24" stroke-width="2" opacity="0.35"/>
+    <rect x="-38" y="-6" width="12" height="12" rx="2" stroke-width="2" opacity="0.5"/>
+    <path d="M-35,-2 L-31,2 L-24,-6" stroke-width="2" opacity="0.6"/>
+    <line x1="-18" y1="0" x2="35" y2="0" stroke-width="2" opacity="0.3"/>
+    <rect x="-38" y="18" width="12" height="12" rx="2" stroke-width="2" opacity="0.5"/>
+    <line x1="-18" y1="24" x2="30" y2="24" stroke-width="2" opacity="0.25"/>
+    <rect x="-38" y="42" width="12" height="12" rx="2" stroke-width="2" opacity="0.4"/>
+    <line x1="-18" y1="48" x2="32" y2="48" stroke-width="2" opacity="0.2"/>
+    <!-- Paper edge -->
+    <path d="M45,85 L45,75 L55,85" fill="white" fill-opacity="0.05" stroke-width="1" opacity="0.2"/>
   </g>
 </svg>
