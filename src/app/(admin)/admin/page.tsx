@@ -1,7 +1,29 @@
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Users, BookOpen, BarChart3 } from "lucide-react";
+import { createClient } from "@/lib/supabase/server";
 
-export default function AdminDashboardPage() {
+export default async function AdminDashboardPage() {
+  const supabase = await createClient();
+
+  const [
+    { count: membersCount },
+    { count: activeMembersCount },
+    { count: coursesCount },
+    { count: activeGrantsCount },
+  ] = await Promise.all([
+    supabase.from("profiles").select("*", { count: "exact", head: true }),
+    supabase
+      .from("profiles")
+      .select("*", { count: "exact", head: true })
+      .eq("is_active", true)
+      .eq("role", "member"),
+    supabase.from("courses").select("*", { count: "exact", head: true }),
+    supabase
+      .from("access_grants")
+      .select("*", { count: "exact", head: true })
+      .eq("is_granted", true),
+  ]);
+
   return (
     <div>
       <h1 className="mb-6 text-2xl font-semibold">Admin Dashboard</h1>
@@ -17,9 +39,9 @@ export default function AdminDashboardPage() {
             </p>
           </CardHeader>
           <CardContent>
-            <p className="text-3xl font-bold">–</p>
+            <p className="text-3xl font-bold">{membersCount ?? 0}</p>
             <p className="text-xs text-muted-foreground">
-              Wird nach DB-Anbindung geladen
+              {activeMembersCount ?? 0} aktive Mitglieder
             </p>
           </CardContent>
         </Card>
@@ -34,9 +56,9 @@ export default function AdminDashboardPage() {
             </p>
           </CardHeader>
           <CardContent>
-            <p className="text-3xl font-bold">–</p>
+            <p className="text-3xl font-bold">{coursesCount ?? 0}</p>
             <p className="text-xs text-muted-foreground">
-              Wird nach DB-Anbindung geladen
+              Erstellte Lehrgänge
             </p>
           </CardContent>
         </Card>
@@ -51,9 +73,9 @@ export default function AdminDashboardPage() {
             </p>
           </CardHeader>
           <CardContent>
-            <p className="text-3xl font-bold">–</p>
+            <p className="text-3xl font-bold">{activeGrantsCount ?? 0}</p>
             <p className="text-xs text-muted-foreground">
-              Wird nach DB-Anbindung geladen
+              Freigeschaltete Zugriffe
             </p>
           </CardContent>
         </Card>
