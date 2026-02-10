@@ -1,25 +1,28 @@
-import { Card, CardContent } from "@/components/ui/card";
-import { BookOpen } from "lucide-react";
+import { redirect } from "next/navigation";
+import { createClient } from "@/lib/supabase/server";
+import { getAccessibleCourses } from "@/lib/access";
+import { DashboardClient } from "./dashboard-client";
 
-export default function DashboardPage() {
+export default async function DashboardPage() {
+  const supabase = await createClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+
+  if (!user) redirect("/login");
+
+  const { data: profile } = await supabase
+    .from("profiles")
+    .select("full_name")
+    .eq("id", user.id)
+    .single();
+
+  const courses = await getAccessibleCourses(user.id);
+
   return (
-    <div>
-      <h1 className="mb-6 text-2xl font-semibold">Meine Lehrgänge</h1>
-
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {/* Placeholder - will be populated with real courses in Phase 3 */}
-        <Card className="flex flex-col items-center justify-center border-dashed py-12">
-          <CardContent className="text-center">
-            <BookOpen className="mx-auto mb-4 h-12 w-12 text-muted-foreground/50" />
-            <p className="text-lg font-medium text-muted-foreground">
-              Keine Lehrgänge
-            </p>
-            <p className="mt-1 text-sm text-muted-foreground">
-              Ihnen wurden noch keine Lehrgänge freigeschaltet.
-            </p>
-          </CardContent>
-        </Card>
-      </div>
-    </div>
+    <DashboardClient
+      userName={profile?.full_name || ""}
+      courses={courses}
+    />
   );
 }

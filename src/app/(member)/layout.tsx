@@ -1,6 +1,6 @@
 import { redirect } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
-import { AppHeader } from "@/components/app-header";
+import { MemberHeader } from "@/components/member-header";
 
 export default async function MemberLayout({
   children,
@@ -24,8 +24,8 @@ export default async function MemberLayout({
 
   return (
     <div className="flex h-screen flex-col">
-      <AppHeader userName={profile?.full_name || user.email || "Mitglied"} />
-      <main className="flex-1 overflow-y-auto bg-secondary p-6">
+      <MemberHeader userName={profile?.full_name || user.email || "Mitglied"} />
+      <main className="flex-1 overflow-y-auto bg-secondary">
         {children}
       </main>
     </div>
